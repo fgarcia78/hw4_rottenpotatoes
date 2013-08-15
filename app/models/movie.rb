@@ -5,7 +5,7 @@ class Movie < ActiveRecord::Base
 
   def self.find_similar(director)
   	if director.nil?
-  		return []
+  		[]
   	else
   		Movie.find_all_by_director(director)
   	end
